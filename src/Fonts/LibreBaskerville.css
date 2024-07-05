@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Libre Baskerville-Bold';
+    src: url('../Fonts/Baskerville-Bold/LibreBaskerville-Bold.ttf') format('truetype');
+    /* Add additional font formats if needed */
+    font-weight: bold;
+    font-style: normal;
+  }
+  
