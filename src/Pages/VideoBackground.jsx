@@ -71,7 +71,7 @@ const VideoBackground = () => {
       <video
         className="lazyload absolute top-0 left-0 w-full h-full object-cover z-0"
         data-src={
-          "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/videos%2FtattvaAnimation.VOd(1)%20(1).mp4?alt=media&token=a63f36da-d527-48da-af6b-c1fa77a44f05"
+          "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/videos%2FtattavaAnimation30sec.mp4?alt=media&token=46aefbc3-94d7-4daf-a8d2-04e8c69ce95b"
         }
         autoPlay
         loop

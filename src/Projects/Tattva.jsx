@@ -10,6 +10,7 @@ const walkthrough =
 
 const Tattva = ({ heading, architect, projectBy, backgroundImage }) => {
   const [fullScreenImage, setFullScreenImage] = useState(null);
+  const [showVideoPopup, setShowVideoPopup] = useState(false);
 
   const openFullScreen = (imageUrl) => {
     setFullScreenImage(imageUrl);
@@ -26,6 +27,35 @@ const Tattva = ({ heading, architect, projectBy, backgroundImage }) => {
     const youtubeUrl =
       "https://www.youtube.com/watch?v=F0Lbv9DofNA&feature=youtu.be";
     window.open(youtubeUrl);
+  };
+  const closeVideoPopup = () => {
+    setShowVideoPopup(false);
+  };
+  const openVideoPopup = () => {
+    setShowVideoPopup(true);
+  };
+  const VideoPopup = ({ videoId, onClose }) => {
+    return (
+      <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+        <div className="relative w-[90vw] h-[80vh] max-w-[1200px] max-h-[800px]">
+          <button
+            onClick={onClose}
+            className="absolute -top-10 right-0 text-white text-4xl hover:text-gray-300"
+          >
+            &times;
+          </button>
+          <div className="w-full h-full">
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}`}
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    );
   };
   return (
     <div className="flex flex-col items-center justify-center min-h-screen relative bg-black">
@@ -86,7 +116,7 @@ const Tattva = ({ heading, architect, projectBy, backgroundImage }) => {
                     alt="WalkThrough"
                     disabled={true}
                     className="h-16 w-16 mr-4 transition-transform transform hover:scale-110"
-                    // onClick={() => openYouTubeVideo()}
+                    onClick={openVideoPopup}
                   />
                   <p className="text-black">WalkThrough</p>
                 </div>
@@ -95,6 +125,9 @@ const Tattva = ({ heading, architect, projectBy, backgroundImage }) => {
           </div>
         </div>
       </div>
+      {showVideoPopup && (
+        <VideoPopup videoId="nbRrtekVaEw" onClose={closeVideoPopup} />
+      )}
     </div>
   );
 };

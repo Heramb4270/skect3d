@@ -38,7 +38,11 @@ const ProjectInfoCard = ({ videoData }) => {
   // Listen for fullscreenchange event
   useEffect(() => {
     const exitFullscreenHandler = () => {
-      if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+      if (
+        !document.fullscreenElement &&
+        !document.webkitFullscreenElement &&
+        !document.msFullscreenElement
+      ) {
         setIsFullscreen(false);
       }
     };
@@ -48,7 +52,10 @@ const ProjectInfoCard = ({ videoData }) => {
     document.addEventListener("keydown", handleKeyDown);
     return () => {
       document.removeEventListener("fullscreenchange", exitFullscreenHandler);
-      document.removeEventListener("webkitfullscreenchange", exitFullscreenHandler);
+      document.removeEventListener(
+        "webkitfullscreenchange",
+        exitFullscreenHandler
+      );
       document.removeEventListener("msfullscreenchange", exitFullscreenHandler);
       document.removeEventListener("keydown", handleKeyDown);
     };
@@ -57,11 +64,15 @@ const ProjectInfoCard = ({ videoData }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-2 mt-20">
       {/* Heading */}
-      <h1 className="text-4xl font-bold mb-4 text-black">Experience the Magic</h1>
+      <h1 className="text-4xl font-bold mb-4 text-black">
+        Experience the Magic
+      </h1>
 
       {/* Small centered below the heading */}
       <div className="text-center mb-8">
-        <p className="text-base text-black">For a video heading on your website, you might consider something.</p>
+        <p className="text-base text-black">
+          For a video heading on your website, you might consider something.
+        </p>
       </div>
 
       {/* Map through videoData to render VideoSection components */}
@@ -81,5 +92,3 @@ const ProjectInfoCard = ({ videoData }) => {
 };
 
 export default ProjectInfoCard;
-
-

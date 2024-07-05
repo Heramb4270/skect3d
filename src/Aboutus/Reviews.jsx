@@ -11,7 +11,7 @@ const Reviews = () => {
     >
       <div className="bg-black bg-opacity-50 h-full flex flex-col justify-center items-center p-4 rounded-md mt-10 mb-10">
         <h1 className="text-4xl font-bold text-white mb-8 text-center">
-          Review's Villa Nashik
+          Review's Villa
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Four cards in a row */}

@@ -10,17 +10,15 @@ import { storage } from "../firebase.js";
 const HomePage = () => {
   const videoData = [
     {
-      videoURL:
-        "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/videos%2FtattvaAnimation.VOd(1)%20(1).mp4?alt=media&token=a63f36da-d527-48da-af6b-c1fa77a44f05",
+      videoURL: "https://www.youtube.com/embed/nbRrtekVaEw?si=u1UXqbrQi-Xf2qJy",
       title: "Tattva, Somalwada Nagpur",
       description:
         "The Tattva project is a design project targeting an integrated residential and urban community from Deems Real Estate Development Company. The project is designed while preserving the region's heritage and ancient principles. In the Hail urban project, the scheme has been carefully divided to ensure effective mobility and sustainable comfort. Where all services have been taken into account in strategic and easy-to-access locations to ensure an integrated project.",
       link: "/tattvproject",
     },
     {
-      videoURL:
-        "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/videos%2FMiracle%20Z.mp4?alt=media&token=50f9d7d5-5168-4843-863d-1e280b493492",
-      title: "Miracle Z by Prescott",
+      videoURL: "https://www.youtube.com/embed/deZvLWv0U1U?si=tYxJzYdPNTlrrvCO",
+      title: "Miracle Z, Jabalpur",
       description:
         "Introducing Miracle Z, a groundbreaking construction project that exemplifies innovation in urban living. Located in a prime area, it redefines modern lifestyles with visionary design and cutting-edge amenities. Miracle Z showcases sustainable architecture that harmonizes with its surroundings while offering luxury and comfort. The project features meticulously crafted interiors and eco-friendly infrastructure, setting new standards in urban development. With a focus on community and sustainability, Miracle Z not only enhances the skyline but also fosters a vibrant, inclusive neighborhood. Experience the future of urban living where visionary design meets unparalleled quality.",
       link: "/jasmineproject",
