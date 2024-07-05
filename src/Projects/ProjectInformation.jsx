@@ -18,6 +18,7 @@ const ProjectInformation = ({
   backgroundImage,
 }) => {
   const [fullScreenImage, setFullScreenImage] = useState(null);
+  const [showVideoPopup, setShowVideoPopup] = useState(false);
 
   const openFullScreen = (imageUrl) => {
     setFullScreenImage(imageUrl);
@@ -26,11 +27,39 @@ const ProjectInformation = ({
   const closeFullScreen = () => {
     setFullScreenImage(null);
   };
+  const openVideoPopup = () => {
+    setShowVideoPopup(true);
+  };
 
+  const closeVideoPopup = () => {
+    setShowVideoPopup(false);
+  };
   const navigateToPage = (page) => {
     window.location.href = `${page}`;
   };
-
+  const VideoPopup = ({ videoId, onClose }) => {
+    return (
+      <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+        <div className="relative w-[90vw] h-[80vh] max-w-[1200px] max-h-[800px]">
+          <button
+            onClick={onClose}
+            className="absolute -top-10 right-0 text-white text-4xl hover:text-gray-300"
+          >
+            &times;
+          </button>
+          <div className="w-full h-full">
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}`}
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    );
+  };
   const navigateToExternalPage = (url) => {
     window.location.href = url;
   };
@@ -101,6 +130,7 @@ const ProjectInformation = ({
                     disabled={true}
                     className="h-16 w-16 mr-4 transition-transform transform hover:scale-110"
                     // onClick={() => openYouTubeVideo()}
+                    onClick={openYouTubeVideo}
                   />
                   <p className="text-black">WalkThrough</p>
                 </div>
@@ -109,6 +139,9 @@ const ProjectInformation = ({
           </div>
         </div>
       </div>
+      {showVideoPopup && (
+        <VideoPopup videoId="deZvLWv0U1U" onClose={closeVideoPopup} />
+      )}
     </div>
   );
 };
