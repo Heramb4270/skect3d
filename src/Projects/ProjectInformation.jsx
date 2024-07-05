@@ -130,7 +130,7 @@ const ProjectInformation = ({
                     disabled={true}
                     className="h-16 w-16 mr-4 transition-transform transform hover:scale-110"
                     // onClick={() => openYouTubeVideo()}
-                    onClick={openYouTubeVideo}
+                    onClick={openVideoPopup}
                   />
                   <p className="text-black">WalkThrough</p>
                 </div>
