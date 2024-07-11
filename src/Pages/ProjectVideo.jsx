@@ -48,28 +48,30 @@ const ProjectVideo = () => {
   };
 
   return (
-    <div className="relative h-screen mb-8">
-      <video
-        className="lazyload absolute top-0 left-0 w-full h-full object-cover z-0"
-        data-src={
-          "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/videos%2Fvideoplayback.mp4?alt=media&token=8c345aa4-066f-4883-aeb8-00cdf10e4485"
-        }
-        autoPlay
-        loop
-        muted
-        preload="none"
-      >
-        Your browser does not support the video tag.
-      </video>
+    <div className="relative  h-screen overflow-hidden mb-10">
+      <div className="absolute inset-0">
+        <video
+          className="lazyload w-full h-full object-cover"
+          data-src="https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/videos%2Fvideoplayback.mp4?alt=media&token=8c345aa4-066f-4883-aeb8-00cdf10e4485"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="none"
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
       <img
         src={logo}
         alt="Logo"
-        onClick={handleLogoClick} // Attach onClick event
-        className="fixed top-4 left-4 z-20 w-44 h-12 md:w-60 md:h-28 lg:w-60 lg:h-28 cursor-pointer"
+        onClick={handleLogoClick}
+        className="fixed top-4 left-8 z-10 w-32 h-10 sm:w-44 sm:h-12 md:w-60 md:h-28 lg:w-60 lg:h-28 cursor-pointer"
       />
       <div
         id="text-overlay"
-        className="absolute inset-0 flex items-center justify-center text-black z-10 opacity-0 transition-opacity duration-1000 text-6xl font-bold"
+        className="absolute inset-0 flex items-center justify-center text-black z-10 opacity-0 transition-opacity duration-1000 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold px-4 text-center"
       ></div>
     </div>
   );
