@@ -10,7 +10,7 @@ const ProjectVideo = () => {
   const navigate = useNavigate(); // Initialize useNavigate hook
   const [textIndex, setTextIndex] = useState(0);
   const textData = [
-    { text: "Welcome", duration: 10000 },
+    { text: "Welcome", duration: 5000 },
     { text: "to", duration: 3000 },
     { text: "Photorealistic", duration: 5000 },
     { text: "and", duration: 5000 },
@@ -46,21 +46,25 @@ const ProjectVideo = () => {
   const handleLogoClick = () => {
     navigate("/"); // Navigate to Contact Us page
   };
+  
 
   return (
     <div className="relative  h-screen overflow-hidden mb-10">
       <div className="absolute inset-0">
-        <video
+        <video 
           className="lazyload w-full h-full object-cover"
-          data-src="https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/videos%2Fvideoplayback.mp4?alt=media&token=8c345aa4-066f-4883-aeb8-00cdf10e4485"
+          data-src="https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/videos%2Fvideoplayback.mp4?alt=media&token=8c345aa4-066f-4883-aeb8-00cdf10e4485#t=10"
           autoPlay
           loop
           muted
           playsInline
           preload="none"
+          
         >
           Your browser does not support the video tag.
         </video>
+        
+
       </div>
 
       <img
