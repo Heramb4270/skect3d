@@ -30,7 +30,7 @@ const Luxiria = ({ heading, architect, projectBy, backgroundImage }) => {
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="absolute inset-0 flex flex-col items-center justify-end">
-          <div className="h-1/3 bg-white bg-opacity-50 flex flex-col items-center justify-end p-4 w-full max-[450px]:text-3xl">
+          <div className="h-2/5 bg-white bg-opacity-50 flex flex-col items-center justify-end p-4 w-full">
             <div className="text-center">
               <h1 className="text-4xl font-bold mb-2 text-black text-shadow-md max-[450px]:text-3xl">
                 {heading}
@@ -43,6 +43,9 @@ const Luxiria = ({ heading, architect, projectBy, backgroundImage }) => {
               </p>
 
               {/* Buttons for Interior, Exterior, and VR */}
+
+              {/* Exterior button */}
+              {/* Buttons for Interior, Exterior, and VR */}
               <div className="flex justify-center space-x-4 mt-4">
                 {/* Interior button */}
                 <div className="relative inline-block font-medium group py-1.5 px-2.5">
@@ -51,7 +54,7 @@ const Luxiria = ({ heading, architect, projectBy, backgroundImage }) => {
                     alt="interior"
                     disabled={true}
                     className="h-16 w-16 mr-4 transition-transform transform hover:scale-110"
-                    // onClick={() => navigateToPage("interior")}
+                    onClick={() => navigateToPage("/luxiriaInterior")}
                   />
                   <p className="text-black">Interior</p>
                 </div>
@@ -61,6 +64,7 @@ const Luxiria = ({ heading, architect, projectBy, backgroundImage }) => {
                   <img
                     src={exteriorlogo}
                     alt="exterior"
+                    disabled={true}
                     className="h-16 w-16 mr-4 transition-transform transform hover:scale-110"
                     onClick={() => navigateToPage("/luxiriaexterior")}
                   />
@@ -77,13 +81,14 @@ const Luxiria = ({ heading, architect, projectBy, backgroundImage }) => {
                   />
                   <p className="text-black">360 vr</p>
                 </div>
+
+                {/* WalkThrough button */}
                 <div className="relative inline-block font-medium group py-1.5 px-2.5">
                   <img
                     src={walkthrough}
                     alt="WalkThrough"
                     disabled={true}
                     className="h-16 w-16 mr-4 transition-transform transform hover:scale-110"
-                    // onClick={() => openYouTubeVideo()}
                   />
                   <p className="text-black">WalkThrough</p>
                 </div>

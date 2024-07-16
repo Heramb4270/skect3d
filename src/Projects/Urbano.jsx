@@ -67,7 +67,7 @@ const Urbano = ({ heading, architect, projectBy, backgroundImage }) => {
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="absolute inset-0 flex flex-col items-center justify-end">
-          <div className="h-1/3 bg-white bg-opacity-50 flex flex-col items-center justify-end p-4 w-full">
+          <div className="h-2/5 bg-white bg-opacity-50 flex flex-col items-center justify-end p-4 w-full">
             <div className="text-center">
               <h1 className="text-4xl font-bold mb-2 text-black text-shadow-md max-[450px]:text-3xl">
                 {heading}

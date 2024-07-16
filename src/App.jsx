@@ -27,6 +27,7 @@ import MiracleZInterior from "./Interior/MiracleZInterior";
 import JasmineInterior from "./Interior/JasminInterior";
 import PyramidInterior from "./Interior/PyramidInterior";
 import UrbanoInterior from "./Interior/UrbanoInterior";
+import LuxiriaInterior from "./Interior/LuxiriaInterior";
 
 function App() {
   const googleApiKey = "YOUR_GOOGLE_MAPS_API_KEY";
@@ -43,6 +44,10 @@ function App() {
             <Route
               path="/miraclezInterior"
               element={<MiracleZInterior />}
+            ></Route>
+            <Route
+              path="/luxiriaInterior"
+              element={<LuxiriaInterior />}
             ></Route>
             <Route path="/urbanoInterior" element={<UrbanoInterior />}></Route>
             <Route
