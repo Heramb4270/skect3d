@@ -36,16 +36,16 @@ const exterior_img9 =
   "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/images%2FJasmine%2F9.jpg?alt=media&token=34b76342-fceb-4073-9b76-48333d1018a6";
 const exterior_img10 =
   "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/images%2FJasmine%2F10.jpg?alt=media&token=88983739-b230-4025-9c3c-3e94b5121755";
-const exterior_img11 =
-  "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/images%2FJasmine%2F11.jpg?alt=media&token=76148ee0-b076-4a8d-9ed0-da91b0ebbe8e";
+// const exterior_img11 =
+//   "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/images%2FJasmine%2F11.jpg?alt=media&token=76148ee0-b076-4a8d-9ed0-da91b0ebbe8e";
 const exterior_img12 =
   "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/images%2FJasmine%2F12.jpg?alt=media&token=e296b4df-c751-43be-9427-0d26d6e2def3";
 const exterior_img13 =
   "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/images%2FJasmine%2F13.jpg?alt=media&token=8d8bb133-5fc6-4baa-838d-01aa3a44643d";
-const exterior_img14 =
-  "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/images%2FJasmine%2F14.jpg?alt=media&token=9f8295a6-3216-4d2e-86a5-e9a6e38f25f9";
-const exterior_img15 =
-  "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/images%2FJasmine%2F15.jpg?alt=media&token=615197a9-2c9d-4bc4-bb75-fe90f667f260";
+// const exterior_img14 =
+//   "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/images%2FJasmine%2F14.jpg?alt=media&token=9f8295a6-3216-4d2e-86a5-e9a6e38f25f9";
+// const exterior_img15 =
+//   "https://firebasestorage.googleapis.com/v0/b/deo-project-201f2.appspot.com/o/images%2FJasmine%2F15.jpg?alt=media&token=615197a9-2c9d-4bc4-bb75-fe90f667f260";
 
 const JasmineExterior = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -62,11 +62,11 @@ const JasmineExterior = () => {
     exterior_img8,
     exterior_img9,
     exterior_img10,
-    exterior_img11,
+   // exterior_img11,
     exterior_img12,
     exterior_img13,
-    exterior_img14,
-    exterior_img15,
+   // exterior_img14,
+    //exterior_img15,
   ];
 
   // Function to handle image click
