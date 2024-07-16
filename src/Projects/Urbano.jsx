@@ -88,7 +88,7 @@ const Urbano = ({ heading, architect, projectBy, backgroundImage }) => {
                     alt="interior"
                     disabled={true}
                     className="h-16 w-16 mr-4 transition-transform transform hover:scale-110"
-                    // onClick={() => navigateToPage("interior")}
+                    onClick={() => navigateToPage("urbanoInterior")}
                   />
                   <p className="text-black">Interior</p>
                 </div>

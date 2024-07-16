@@ -23,6 +23,10 @@ import UrbanoExterior from "./Exterior/UrbanoExterior";
 import ProjectInformation from "./Projects/ProjectInformation";
 import LuxiriaExterior from "./Exterior/LuxiriaExterior";
 import MiracleZ from "./Exterior/MiracleZ";
+import MiracleZInterior from "./Interior/MiracleZInterior";
+import JasmineInterior from "./Interior/JasminInterior";
+import PyramidInterior from "./Interior/PyramidInterior";
+import UrbanoInterior from "./Interior/UrbanoInterior";
 
 function App() {
   const googleApiKey = "YOUR_GOOGLE_MAPS_API_KEY";
@@ -36,6 +40,19 @@ function App() {
             <Route path="/projects" element={<ProjectsPage />}></Route>
             {/* <Route path='/360vr' element={<VR />}></Route> */}
             <Route path="/miraclez" element={<MiracleZ />}></Route>
+            <Route
+              path="/miraclezInterior"
+              element={<MiracleZInterior />}
+            ></Route>
+            <Route path="/urbanoInterior" element={<UrbanoInterior />}></Route>
+            <Route
+              path="/jasmineInterior"
+              element={<JasmineInterior />}
+            ></Route>
+            <Route
+              path="/pyramidInterior"
+              element={<PyramidInterior />}
+            ></Route>
             <Route path="/aboutus" element={<AboutUs />}></Route>
             <Route path="/contactus" element={<Contactus />}></Route>
             <Route path="/interior" element={<InteriorImageGrid />}></Route>
